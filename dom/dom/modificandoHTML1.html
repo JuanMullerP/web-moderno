@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Modificando HTML #01</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+</head>
+
+<body class='conteudo exercicio'>
+    <script>
+        const body=document.querySelector('body')
+
+        const div1= document.createElement('div')
+        div1.classList.add('destaque')
+        div1.innerHTML= 'primeiro'
+        const span= document.createElement('span')
+        span.innerHTML='doMal'
+        div1.appendChild(span)
+        const div2=document.createElement('div')
+        body.insertBefore(div2,body.childNodes[0])
+        const div3=div1.cloneNode(true)
+        body.appendChild(div1)
+        body.insertBefore(div3,body.childNodes[0])
+    </script>
+</body>
+
+</html>

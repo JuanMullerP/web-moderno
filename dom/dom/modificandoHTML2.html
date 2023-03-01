@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Modificando HTML #02</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+</head>
+
+<body class='conteudo exercicio'>
+    <div>
+        <p>Texto Inicial</p>
+    </div>
+    <script>
+        const div =document.querySelector('div')
+        div.innerHTML='Texto alterado' /* subistitui tudo que existente dentro da tag */
+        div.insertAdjacentHTML('beforebegin','<p>é isso</p>')
+        div.insertAdjacentHTML('afterbegin','<p>é isso msm</p>')/* analogamente para o fim "end" */
+
+        console.log(div.innerText) /* pega apenas o texto contido na tag */
+    </script>
+</body>
+
+</html>

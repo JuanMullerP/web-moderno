@@ -1,0 +1,145 @@
+.conteudo> div{
+    position: absolute;
+    background-color: aquamarine;
+    top: 200px;
+    width: 800px;
+    height: 600px;
+    border: solid 3px;
+    border-color: cornflowerblue;
+    overflow: hidden;
+}
+.obstaculo{
+    position: absolute;
+    top: 0px;
+    left:100.08%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    vertical-align: top;
+    width: 90px;
+    height: 100%;
+}
+.cano-completo0{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+}
+.cano0{
+    background-color: green;
+    width: 90%;
+    height: 100%;
+    border: solid 1px black;
+}
+.tampa0{
+    background-color: green;
+    height: 10px;
+    width: 100%;
+    border: solid 1px black;
+}
+.cano-completo-inv0{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 30%;
+}
+.cano-inv0{
+    background-color: green;
+    width: 90%;
+    height: 100%;
+    border: solid 1px black;
+}
+.tampa-inv0{
+    background-color: green;
+    height: 10px;
+    width: 100%;
+    border: solid 1px black;
+}
+.cano-completo1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 30%;
+}
+.cano1{
+    background-color: green;
+    width: 90%;
+    height: 100%;
+    border: solid 1px black;
+}
+.tampa1{
+     
+    background-color: green;
+    height: 10px;
+    width: 100%;
+    border: solid 1px black;
+}
+.cano-completo-inv1{
+     
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+}
+.cano-inv1{
+     
+    background-color: green;
+    width: 90%;
+    height: 100%;
+    border: solid 1px black;
+}
+.tampa-inv1{
+     
+    background-color: green;
+    height: 10px;
+    width: 100%;
+    border: solid 1px black;
+}
+.cano-completo2{
+     
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 70%;
+}
+.cano2{
+     
+    background-color: green;
+    width: 90%;
+    height: 100%;
+    border: solid 1px black;
+}
+.tampa2{
+     
+    background-color: green;
+    height: 10px;
+    width: 100%;
+    border: solid 1px black;
+}
+.cano-completo-inv2{
+     
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+}
+.cano-inv2{
+     
+    background-color: green;
+    width: 90%;
+    height: 100%;
+    border: solid 1px black;
+}
+.tampa-inv2{
+     
+    background-color: green;
+    height: 10px;
+    width: 100%;
+    border: solid 1px black;
+}

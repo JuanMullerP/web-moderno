@@ -1,0 +1,58 @@
+<video id="meuvideo" controls controlsList="nodownload">
+    <source src="http://files.cod3r.com.br/curso-web/video.mp4" type="video/mp4">
+</video>
+
+<div wm-progresso="meuVideo" class="progresso">
+    <div></div>
+
+</div>
+
+<div>
+    <button wm-play="meuVideo"  onclick="play()">Play</button>
+    <button wm-pause="meuVideo" onclick="pause()">Pause</button>
+</div>
+
+<style>
+    .progresso{
+        height: 20px;
+        width: 500px;
+        border: solid 1px #444;
+        margin: 20px;
+    }
+    .progresso > div{
+        background-color: red;
+        color: white;
+        height: 100%;
+        text-align: right;
+        font-size: 14px;
+        width: 10%;
+    }
+</style>
+
+<script>
+    function porcentagem(){
+        let video=document.querySelector('#meuVideo')
+        porcent=(video.currentTime*100)/video.duration
+        porcent=parseInt(porcent)
+        return porcent
+    }
+    function progessobarra(){
+        let teste=document.querySelector('[wm-progresso]>div')
+        teste.style.width=porcentagem() + '\%'
+    }
+    (function atualiza(){
+        let video=document.querySelector('#meuVideo')
+        setInterval(progessobarra,1)
+        if(video.currentTime>=video.duration){
+            return
+        }
+    })();
+
+    function play(){
+        document.querySelector('#meuvideo').play()
+    }
+    function pause(){
+        document.querySelector('#meuvideo').pause()
+    }
+
+</script>
