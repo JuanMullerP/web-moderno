@@ -14,6 +14,20 @@
     <div id="post"></div>
 
     <script>
-        // ...
+        function exibirResultado(id,dados){
+            const texto = JSON.stringify(dados)
+            document.getElementById(id).innerHTML=texto
+        }
+        // fazendo a mudança no server axios.get(`parOuImpar/${5}`).then(resp => exibirResultado('get',resp.data))
+        axios.get(`parOuImpar`,{
+            params:{
+                numero: 4
+            }
+        }).then(resp => exibirResultado('get',resp.data))
+
+        axios.post('formulario',{
+            nome: "juan",
+            sobrenome: "muller"
+        }).then(resp=>exibirResultado('post',resp.data))
     </script>
 </body>

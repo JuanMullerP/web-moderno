@@ -14,6 +14,41 @@
     <div id="post"></div>
 
     <script>
-        // ...
+        function exibirResultado(id,dados){
+            const texto = JSON.stringify(dados)
+            document.getElementById(id).innerHTML=texto
+        }
+
+        $.ajax({
+            url: 'parOuImpar',
+            data:{
+                numero:5
+            },
+            success(data){
+                exibirResultado('get',data)
+            },
+            error(err){
+                const msg = document.createTextNode(`Erro: ${err.status} ${err.statusText}`)
+                
+                document.body.appendChild(msg)
+            }
+        })
+
+        $.ajax({
+            url: 'formulario',
+            method:"post",
+            data:{
+                nome:"juan",
+                poder:"loucura"
+            },
+            success(data){
+                exibirResultado('post',data)
+            },
+            error(err){
+                const msg = document.createTextNode(`Erro: ${err.status} ${err.statusText}`)
+                
+                document.body.appendChild(msg)
+            }
+        })
     </script>
 </body>

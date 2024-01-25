@@ -29,6 +29,27 @@
     </form>
     <div id="resultado"></div>
     <script>
-        // ...
+        //usuarioform é o valor do atributo name do formulario
+        document.usuarioForm.onsubmit = async e =>{
+            e.preventDefault()
+
+            const form = e.target
+            const data = new  FormData(form)
+            data.append('ajax', true)
+
+            const options = {
+                method :form.method,
+                body: new URLSearchParams(data)
+            }
+
+            fetch(form.action, options)
+            .then(resp=>resp.json())
+            .then(json =>{
+                const resultado =document.getElementById('resultado')
+                resultado.innerHTML = `Nome: ${json.nome} <br>  Sobrenome: ${json.sobrenome}<br>  Ajax: ${json.ajax}<br>  id: ${json.id}`
+            })
+            .catch(e=>document.body.appendChild(document.createTextNode(`Erro: ${e.message}`)))
+
+        }
     </script>
 </body>
