@@ -11,6 +11,65 @@
     <h1>Estados</h1>
 
     <script>
-        // ...
+        function ajax(config){
+            const xhr = new XMLHttpRequest()
+            //abrir uma requisição com metodo open definindo 1:tipo de quisição 2:url 3:boolean para assincrono(true) ou sincrono(false)
+            xhr.open(config.metodo,config.url, true)
+
+            //capturando o evento onload
+            xhr.onload = e =>{
+                //verificando se o codigo da requisição é de sucesso 
+                if (xhr.status===200){
+                    //chamando a função sucesso que foi passada dentro do objeto config
+                    config.sucesso(xhr.response)
+                //caso não tenha sido um sucesso 200 e tenha sido um erro de pagina ou usario 400+
+                } else if(xhr.status>=400){
+                    //chama a função de erro passada no config mandando um objeto que contem o codigo de erro e a descrição
+                    config.erro({
+                        code:xhr.status,
+                        text:xhr.statusText
+                    })
+                }
+            }
+            //quem de fato envia a requisição
+            xhr.send()
+        }
+        ajax({
+            url: "dados/estados.json",
+            metodo:"get",
+            sucesso(resposta){
+                const estados =JSON.parse(resposta)
+
+                const linhas = estados.map(estado =>{
+                    //lembrando q a tag <td> representa a celula da table e ela fica dentro de uma <tr> que representa uma linha da tabela
+                    const tableDataId = document.createElement('td')
+                    tableDataId.innerHTML = estado.id
+
+                    const tableDataNome = document.createElement('td')
+                    tableDataNome.innerHTML = estado.nome
+
+                    const tableDataSigla = document.createElement('td')
+                    tableDataSigla.innerHTML = estado.sigla
+
+                    const tr = document.createElement('tr')
+
+                    tr.appendChild(tableDataId)
+                    tr.appendChild(tableDataNome)
+                    tr.appendChild(tableDataSigla)
+                    
+                    return tr
+                })
+
+                const tabela = document.createElement('table')
+                linhas.forEach(linha=>tabela.appendChild(linha))
+                document.body.appendChild(tabela)
+
+            },
+            erro(e){
+                const msg = document.createTextNode(`${e.code}: ${e.text}`)
+                
+                document.body.appendChild(msg)
+            }
+        })
     </script>
 </body>
