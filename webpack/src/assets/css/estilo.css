@@ -1,0 +1,6 @@
+body{
+    background-color: red;
+    background-image: url('../imgs/img.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}

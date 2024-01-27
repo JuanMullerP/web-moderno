@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Captulo Webpack</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <button class="botao" onclick="cliqueimsm()">teste</button>
+    <script src="principal.js"></script>
+    <script>
+        const b=document.getElementsByClassName('botao')
+        function cliqueimsm(evento){
+            console.log('apertei')
+        }
+        b.onclick=cliqueimsm
+    </script>
+</body>
+</html>

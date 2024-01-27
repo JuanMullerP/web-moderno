@@ -1,0 +1,17 @@
+/*!********************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/assets/css/estilo.css ***!
+  \********************************************************************************************************************/
+body {
+  background-color: red;
+  background-image: url(9c1068f46f7e83e34fdd.png);
+  background-repeat: no-repeat;
+  background-position: center; }
+
+/*!*********************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/assets/scss/index.scss ***!
+  \*********************************************************************************************************************/
+.botao {
+  background-color: #413bb1;
+  color: #fff;
+  font: 1.5em; }
+
