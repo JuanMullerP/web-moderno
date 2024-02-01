@@ -1,0 +1,32 @@
+
+  <div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Adicionar imagem</h1>
+          <button type="button" closeModal class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+            <div class="row">
+                <form>
+                    <fieldset disabled>    
+                        <label for="gameName" class="form-label" >Nome</label>
+                        <input type="text" form-camp id="gameName" class="form-control">
+                        <label for="gameGenre" class="form-label">Genero</label>
+                        <input type="text" form-camp id="gameGenre" class="form-control">
+                        <label for="description" class="form-label d-block">Descreva o jogo</label>
+                        <input type="text" form-camp id="description" class="form-control">
+                    </fieldset>
+                </form>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <input type="file" name="upFile" id="upFile" class="form-control">
+          <button type="button" closeModal class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" id="sub" class="btn btn-primary" disabled>Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>

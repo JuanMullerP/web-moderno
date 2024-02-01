@@ -28,7 +28,7 @@ module.exports = {
     optimization: {
         minimizer: [
             new terserWebpackPlugin({
-                parallel: true,
+                parallel: false,
                 terserOptions:{
                     ecma:6
                 }
@@ -45,7 +45,7 @@ module.exports = {
         new CopyWebpackPlugin({
                 patterns:[
                     { context: 'src/', from: '**/*.html' },
-                    { context: 'src/', from: 'imgs/**/*' },
+                    { context: 'src/', from: 'imgs/**/*' ,noErrorOnMissing:true},
                     { context: './', from: 'docs/**/*.json' }
                 ]
         })

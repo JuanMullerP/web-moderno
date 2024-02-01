@@ -1,18 +1,19 @@
 import $ from 'jquery'
-let uploadbutton = document.getElementById('sub');
+
+setTimeout(()=>{
+
+    let uploadbutton = document.getElementById('sub');
     uploadbutton.addEventListener('click',e=>{
         let uploadInput = document.getElementById('upFile')
         uploadFile(uploadInput)
     });
-
+},2000)
+    
 
 function uploadFile(target){
-    let inputName=target.name
     let file = target.files[0];
     let formData=new FormData()
     formData.append('upFile',file)
-    const nome=file.name.split('.')
-    console.log(nome)
     $.ajax({
         url:'/upload',
         method:'post',
@@ -23,9 +24,8 @@ function uploadFile(target){
             $.ajax({
                 url:'/docs/post/imagens.json',
                 method:'post',
-                data:{game:`${nome[0]}`,path:`./imgs/${file.name}`,format:`${file.type.replace('image/','')}`},
+                data:{game:`${$('#gameName').val().replaceAll(' ','-')}`,path:`./imgs/${file.name}`,genre:`${$('#gameGenre').val()}`,description:`${$('#description').val()}`},
                 success(data){
-                    console.log(data)
                 }
             })
         },
