@@ -1,11 +1,19 @@
 {
-    "users":[{
-        "id":1,
-        "name":"Mayara",
-        "email":"Amayara@gmail.com"
-    },{
-        "id":1,
-        "name":"Dejaneiros",
-        "email":"ODejaneiros@gmail.com"
-    }]
+  "users": [
+    {
+      "id": 2,
+      "name": "Dejaneiros",
+      "email": "ODejaneiros@gmail.com"
+    },
+    {
+      "name": "oracle",
+      "email": "juan_nit11@hotmail.com",
+      "id": 3
+    },
+    {
+      "name": "Mayara",
+      "email": "Amayara@gmail.com",
+      "id": 4
+    }
+  ]
 }
