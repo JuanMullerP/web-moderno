@@ -46,4 +46,7 @@ export default class Cliente{
     get pai(){
         return this.#pai
     }
+    ShowCliente(){
+        return {id:this.#id,nome:this.#nome,idade:this.#idade,email:this.#email,pai:this.#pai}
+    }
 }
