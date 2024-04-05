@@ -4,6 +4,7 @@ interface Layoutprops{
     titulo: String,
     children:any
 }
+'ala'
 
 export default function Layout(props: Layoutprops){
     return (

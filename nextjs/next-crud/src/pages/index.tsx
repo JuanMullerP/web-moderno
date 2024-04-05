@@ -3,7 +3,7 @@ import Tabela from "@/components/Table";
 import Cliente from "@/core/Cliente";
 import { useState } from "react";
 
-
+'ala'
 
 export default  function Home() {
   let [dados,setDados]=useState([{}])

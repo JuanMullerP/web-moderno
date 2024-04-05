@@ -4,7 +4,7 @@ interface TableProps {
     clientes: Cliente[]
 }
 
-
+'ala'
 
 export default function Tabela(props: TableProps) {
     

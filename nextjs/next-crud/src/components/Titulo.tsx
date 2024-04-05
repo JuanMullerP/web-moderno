@@ -5,4 +5,4 @@ export default function Titulo(props:any){
             <hr className=" border-2 border-black"/>
         </div>
     )
-}
+}'ala'
